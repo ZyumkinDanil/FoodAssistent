@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="CSS/style_calculator.css">
+	<link href="https://fonts.googleapis.com/css?family=Inter:regular,700&display=swap" rel="stylesheet" />
+	<title>FA Калькулятор</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header_container">
+				<a href="" class="header_logo">
+					<img src="Images/logo.svg" alt="Логотип">
+				</a>
+				<a href="" class="header_line">
+					<img src="Images/headerline.svg" alt="">
+				</a>
+				<div class="header_space"></div>
+				<div class="header_button">
+					<a href="index.html" style="text-decoration: none;" class="button">Главная</a>
+				</div>
+			</div>
+
+		</header>
+		<main class="main">
+			<div class="main_container">
+				<div class="main_title">
+					<a> Калькулятор КБЖУ </a>
+				</div>
+				<div class="main_calculator_block">
+					<form id="calcForm" class="main_date">
+
+						<div class="main_calc1">
+							<div class="main_calc_part">
+								<div class="calc_title">Ваш возраст: </div>
+								<input type="number" id="age" required>
+							</div>
+							<div class="main_calc_part">
+								<div class="calc_title">Ваш рост, см: </div>
+								<input type="number" id="height" required>
+							</div>
+							<div class="main_calc_part">
+								<div class="calc_title">Ваш вес, кг: </div>
+								<input type="number" id="weight" required>
+							</div>
+						</div>
+
+						<div class="calc_title">Укажите ваш пол:</div>
+						<div class="main_calc">
+							<input class="calc_radio" type="radio" name="calc_sex" id="calc_sex_m" value="1">
+							<label class="calc_label" for="calc_sex_m">Мужской</label>
+
+							<input class="calc_radio" type="radio" name="calc_sex" id="calc_sex_f" value="2">
+							<label class="calc_label" for="calc_sex_f">Женский</label>
+						</div>
+
+
+						<div class="line">
+							<div class="calc_title_line">Ваша активность: </div>
+							<select id="activityLevel" required>
+								<option value="0">Не указано</option>
+								<option value="1.2">Минимальная нагрузка (сидячая работа)</option>
+								<option value="1.375">Немного дневной активности и лёгкий упражнения 1-3 раза в неделю
+								</option>
+								<option value="1.4625">Тренировки 3-5 раз в неделю (или работа средней тяжести)
+								</option>
+								<option value="1.55">Интенсивные тренировки 3-5 раз в неделю</option>
+								<option value="1.6375">Ежедневные тренировки</option>
+								<option value="1.725">Высокие нагрузки или интенсивные тренировки каждый день</option>
+								<option value="1.9">Тяжёлая физическая работа или интенсивные тренировки 2 раза в день
+								</option>
+							</select>
+						</div>
+
+						<div class="line">
+							<div class="calc_title_line">Ваша цель: </div>
+							<select id="goal" required>
+								<option value="0">Не указано</option>
+								<option value="1">Сбросить</option>
+								<option value="2">Удержать</option>
+								<option value="3">Набрать</option>
+
+							</select>
+						</div>
+
+
+						<div id="warning" class="calc_warning"></div>
+						<button class="calc_btn" type="submit">Получить результат</button>
+					</form>
+
+
+					<div class="main_result">
+						<div class="main_result_title">Результат</div>
+						<div class="main_result_block">
+							<div class="main_result_left">
+								<div class="main_result_text">Ваш возраст:</div>
+								<div class="main_result_text">Ваш рост:</div>
+								<div class="main_result_text">Ваш вес:</div>
+								<div class="main_result_text">Ваша активность:</div>
+								<div class="main_result_text">Суточная норма калорий:</div>
+								<div class="main_result_text">Суточная норма белков:</div>
+								<div class="main_result_text">Суточная норма углеводов:</div>
+								<div class="main_result_text">Суточная норма жиров:</div>
+							</div>
+
+							<div id="result" class="main_result_right main_result_text"> </div>
+						</div>
+					</div>
+				</div>
+		</main>
+
+
+		<footer class="footer">
+			<div class="footer_container">
+				<div class="footer_content">
+					<a style="text-decoration: none;" class="footer_text">2024г.</a>
+					<a href="https://t.me/tDanil12" style="text-decoration: none;" class="footer_text">Telegram</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/script.js"></script>
+</body>
+
+</html>
